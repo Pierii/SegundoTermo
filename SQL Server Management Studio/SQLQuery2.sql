@@ -29,3 +29,15 @@ UPDATE Cursos
 
 DELETE FROM Cursos
 	WHERE IdCurso = 5;
+
+SELECT Cursos.*, Disciplinas.*
+FROM Cursos
+FULL JOIN Disciplinas
+ON Cursos.IdCurso = Disciplinas.IdCurso;
+
+INSERT INTO Disciplinas (Nome, IdCurso) 
+VALUES	('Skate de dedo',1)
+		,('Smokes na Overpass',1)
+		,('OSU', 1)
+		,('Chernobyl', 6);
+ 
